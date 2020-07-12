@@ -1,0 +1,298 @@
+$primary: #0077FF;
+$dark: #000;
+$theme-primary:#009991;
+$theme-light:red;
+$theme-dark:#016d68;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: arial;
+    .container {
+        background: #caf0e96c;
+      
+        /* give the outermost container a predefined size */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width:100vw;
+        
+        display: flex;
+        flex-direction: column;
+        .section {
+            // margin: 10px;
+            flex-grow: 1;
+            
+            display: flex;
+            flex-direction: column;
+            
+            /* for Firefox */
+            min-height: 0;
+            .form-content {
+              padding: 0.5% 0;
+              div {
+                margin: 0 1%;
+              }
+
+              form{
+                display:flex;
+                justify-content: space-evenly;
+                label{
+                  color: $theme-primary;
+                }
+                #hidden-label {
+                  color: rgba(255, 255, 255, 0);
+                  //prevent selection
+                  -webkit-user-select: none; /* Safari */
+                  -ms-user-select: none; /* IE 10+ and Edge */
+                  user-select: none; /* Standard syntax */
+                }
+                #submit-div {
+                  display: flex;
+                  flex-direction: column;
+                  #calculate--target {
+                    color: $theme-primary;
+                    max-height: 44px;
+                  //prevent selection
+                  -webkit-user-select: none; /* Safari */
+                  -ms-user-select: none; /* IE 10+ and Edge */
+                  user-select: none; /* Standard syntax */
+                  position: relative;
+                  text-transform: uppercase;
+                  box-shadow:none;
+
+                  
+                    &:hover {
+                      color: white;
+                      background-color: $theme-primary;
+                      box-shadow: 0 2px 0 rgb(5, 90, 83);
+                    }
+                    &:active {
+                      box-shadow:none;
+                      top:2px;
+                      cursor:progress;
+                    }
+                  }
+                }
+
+              }
+              input[type=number],#calculate--target {
+                width: 100%;
+                padding: 10px 15px;
+                font-size: 18px;
+                text-align: center;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid $theme-primary;
+                color: $theme-primary;
+                border-radius: 4px;
+                outline: none;
+              }
+              input[type=number]{
+                &:focus {
+                  border: 2px solid #016d68;
+                  color: #6d0404;
+                  caret-color:#c9c9c9;
+                  
+                }
+              }
+            }
+            .content {
+                // margin: 10px;
+                // margin-top: 0;
+                background: #f5f5f5;
+                .navbar {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content:center;
+                  text-transform: uppercase;
+                  font-size: 17.5px;
+                  background-color: rgb(235, 235, 235);
+
+                    .nav-item {
+                      padding: 20px;                   
+                        .navbar-link{
+                          text-decoration: none;
+                          color: rgb(148, 148, 148);
+                          font-family: Verdana;
+                          &:hover{
+                            color:#777777 ;
+                          }
+                        }
+                    }
+                }
+               
+                  }
+                
+              }
+              
+              .scrollable-content {
+                background: rgb(211, 240, 238);
+                flex-grow: 1;
+                overflow: auto;
+                text-align: center;
+                padding:0 5.5%;
+                /* for Firefox */
+                min-height: 0;
+                .scroll_btn{
+                    display: block;
+                    right:3%;
+                    z-index: 99;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 11px;
+                    border: none;
+                    outline: none;
+                    background-color: rgba(0, 0, 0, 0.301);
+                    color: rgb(255, 255, 255);
+                    cursor: pointer;
+                    padding: 7.5px;
+                    border-radius: 90px;
+                    justify-content: center;
+                    
+                }
+                #myBtn {
+                  position: absolute;
+                    bottom:48%;
+                    
+
+                  }
+                #btn-scroll-bottom {
+                  position:absolute;
+                    top: 55%;
+                    padding-top: 8px;
+                }
+                #myBtn:hover, #btn-scroll-bottom:hover {
+                    background-color: $theme-primary;
+                }
+              }
+          }
+      }
+  
+
+  /* width */
+::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(235, 235, 235); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $theme-primary; 
+  }
+  
+//Hide Input number arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+//Selection color change.
+::-moz-selection { /* Code for Firefox */
+  color: rgb(255, 255, 255);
+  background: $theme-primary;
+
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: $theme-primary;
+}
+
+.text-container{
+  font-size: 1.85rem;
+  color:rgb(0, 109, 94) ;
+  font-family: monospace;
+  padding: 7.5px 0;
+  .calc_value{
+    margin: 0 15px 0px 5px;
+  }
+}
+.max-margin-exceed{
+  color: rgb(211, 211, 211);
+}
+.period_number {
+  color: rgb(143, 145, 144);
+}
+.monthly-targets{
+  color: red;
+}
+.weekly-targets{
+  color: rgb(77, 77, 77);
+}
+.yearly-targets{
+  color: rgb(0, 10, 99);
+}
+.total-investment{
+  color: rgb(13, 0, 128);
+  
+}
+// body
+//   height: 100vh
+//   display: grid
+//   font-family: Roboto
+//   -webkit-text-size-adjust: 100%
+//   -webkit-font-smoothing: antialiased
+  
+
+
+//  //Smallest Screen Size
+//   @media screen and (max-width: 320px) {
+//     body .container .section .scrollable-content #btn-scroll-bottom {
+//       top:15rem;
+//   }
+//   }
+//   //Mobile devices
+
+//   @media screen and (max-width: 480px) {
+//     body .container .section .scrollable-content #btn-scroll-bottom {
+//       top: 12rem;
+//   }
+//   }
+//     //iPads, Tablets
+
+//   @media screen and (max-width: 768px) {
+//     body .container .section .scrollable-content #btn-scroll-bottom {
+//       top: 9rem;
+//   }
+//   }
+//   //Small screens, laptops
+//   @media screen and (max-width: 1024px) {
+//     body .container .section .scrollable-content #btn-scroll-bottom {
+//       top: 9rem;
+//   }
+//   }
+//   //Desktops, large screens
+//   @media screen and (max-width: 1200px) {
+//     body .container .section .scrollable-content #btn-scroll-bottom {
+//       top: 8rem;
+//   }
+//   }
+//   //Extra large screens, TV
+//   @media screen and (min-width: 1201px) {
+//     body .container .section .scrollable-content #btn-scroll-bottom {
+//       top: 8rem;
+//   }
+//   }
