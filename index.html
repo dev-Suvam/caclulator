@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="images/MoneyCal.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon!Cal</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="section">
+      <div class="content">
+        <div class="navbar">
+          <div class="nav-item">
+            <a href="index.html" class="navbar-link">Set Target</a>
+          </div>
+          <div class="nav-item">
+            <a href="pages/calculators.html" class="navbar-link">Trade Calculators</a>
+          </div>
+        </div>
+      </div>
+      <div class="content form-content">
+        <form autocomplete="off">
+          <div>
+            <label for="fname">Amount</label>
+            <input type="number" id="initial-amount" name="fname">
+          </div>
+          <div>
+            <label for="lname">Interest</label>
+            <input type="number" id="interest" name="lname">
+          </div>
+          <div>
+            <label for="fname">Period</label>
+            <input type="number" id="time-period" name="fname">
+          </div>
+          <div>
+            <label for="lname">Change</label>
+            <input type="number" id="change-amount" name="lname" placeholder="">
+          </div>
+          <div>
+
+            <label for="fname">Interval</label>
+            <input type="number" id="change-interval" name="fname" >
+          </div>
+          <div>
+            <label for="lname">Leverage</label>
+            <input type="number" id="leverage" name="lname" value="2" placeholder="2">
+          </div>
+          <div id="submit-div">
+            <label for="lname" id="hidden-label">Leverage</label>
+            <a id="calculate--target">Calculate</a>
+          </div>
+
+        </form>
+      </div>
+      <div class="scrollable-content content">
+        <div>
+          <div>
+            <button id="myBtn" title="Go to top" class="scroll_btn">▲</b▲on>
+          </div>
+          <div>
+            <button id="btn-scroll-bottom" title="Go to bottom" class="scroll_btn">▼</button>
+          </div>
+        </div>
+        <div id="display-result">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script/set-target.js"></script>
+  <script src="script/utility-functions/scroll.js"></script>
+</body>
+
+</html>
+

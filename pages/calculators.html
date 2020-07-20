@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/MoneyCal.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/calculators.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon!Cal</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="content">
+                <div class="navbar">
+                    <div class="nav-item">
+                        <a href="../index.html" class="navbar-link">Set Target</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="calculators.html" class="navbar-link">Trade Calculators</a>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive-content content grid-container">
+                <div class="grid-item grid-item-1">
+                    <h1>
+                        LEVERAGE CALCULATOR
+                    </h1>
+                    <form class="input--sm">
+                        <div class="top-input">
+                            <label class="mb-3px">Shares</label>
+                            <input type="number" class="LC_number-of-shares">
+                        </div>
+                        <div class="top-input">
+                            <label for="" class="mb-3px">BuyPrice/Share</label>
+                            <input type="number" class="LC_price-per-share">
+                        </div>
+                        <div class="top-input">
+                            <label for="" class="mb-3px">Amount</label>
+                            <input type="number" class="LC_amount-used">
+                        </div>
+                    </form>
+                    <div class="button-output-div">
+                        <a class="button LC__calculate-leverage">calculate</a>
+                        <div class="output-section">
+                            <span>
+                                <p class="output-text">
+                                    Leverage = <span class="LC__output-value"></span>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item-2">
+                    <h1>
+                        NUMBER OF SHARES
+                    </h1>
+                    <form class="input--sm">
+                        <div class="top-input">
+                            <label for="" class="mb-3px">Amount</label>
+                            <input type="number" class="NS_amount">
+                        </div>
+                        <div class="top-input">
+                            <label for="" class="mb-3px">BuyPrice/Share</label>
+                            <input type="number" class="NS_price-per-share">
+                        </div>
+                        <div class="top-input">
+                            <label for="" class="mb-3px">Leverage</label>
+                            <input type="number" class="NS_leverage">
+                        </div>
+                    </form>
+                    <div class="button-output-div">
+                        <a class="button button-2 NS_calculate-shares">calculate</a>
+                        <div class="output-section">
+                            <span class="span-2">
+                                <p class="output-text">
+                                    Shares = <span class="NS_output-value"></span>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item-3">
+                    <h1>
+                        PROFIT CALCULATOR
+                    </h1>
+                    <div class="section-container">
+                        <div class="input-section ">
+                            <form>
+                                <div class="bottom-input mb-7-5px">
+                                    <label for="" class="mb-3px">No of Shares</label>
+                                    <input type="number" class="PC_number-of-shares">
+                                </div>
+                                <div class="bottom-input mb-7-5px">
+                                    <label for="" class="mb-3px">Buy Price/Share</label>
+                                    <input type="number" class="PC_buy-price-per-share">
+                                </div>
+                                <div class="bottom-input mb-7-5px">
+                                    <label for="" class="mb-3px">Sell Price/Share</label>
+                                    <input type="number" class="PC_sell-price-per-share">
+                                </div>
+                            </form>
+                            <div class="bottom--btn">
+                                <a class="button PC_calculate-profits">calculate</a>
+                            </div>
+                        </div>
+                        <div class="output-section PC_output">
+                            <div class="centre">
+                                <div class="mb-7-5px">
+                                    <p class="output-text">
+                                        Profit = <span class="PC-output-profit-value"></span>
+                                    </p>
+                                </div>
+                                <div class="mb-7-5px">
+                                    <p class="output-text">
+                                        Profit %= <span class="PC-output-profit-percentage"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item grid-item-4">
+                    <h1>
+                        SELL PRICE
+                    </h1>
+                    <div class="section-container">
+                        <div class="input-section">
+                            <form>
+                                <div class="bottom-input mb-7-5px">
+                                    <label for="" class="mb-3px">No of Shares</label>
+                                    <input type="number" class="SP_number-of-shares">
+                                </div>
+                                <div class="bottom-input mb-7-5px">
+                                    <label for="" class="mb-3px">Buy Price/Share</label>
+                                    <input type="number" class="SP_buy-price-per-share">
+                                </div>
+                                <div class="bottom-input mb-7-5px">
+                                    <label for="" class="mb-3px">Profit Aim</label>
+                                    <input type="number" class="SP_profit-aim">
+                                </div>
+
+                            </form>
+                            <div class="bottom--btn">
+                                <a class="button SP_calculate-sell-price">calculate</a>
+                            </div>
+                        </div>
+                        <div class="output-section">
+                            <ul class="centre">
+                                <li class="output-text mb-7-5px">Sell price = <span class="SP_output-value"></span></li>
+                                <li class="output-text mb-7-5px">Sell Price @1% = <span
+                                        class="SP_output-value-at-one-percent"></span></li>
+                                <li class="output-text mb-7-5px">Profit @1% = <span
+                                        class="SP_output-value-profit-at-one-percent"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=""></script>
+    <script src=""></script>
+</body>
+<script src="../script/trade-calc.js"></script>
+
+</html>
